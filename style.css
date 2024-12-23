@@ -1,0 +1,127 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #002f4b, #dc4225);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 5px solid gold;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #f9d423;
+    text-shadow: 3px 3px 5px #000;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 30px 10%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    text-align: center;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+}
+
+ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    text-indent: -20px;
+    position: relative;
+}
+
+ul li::before {
+    content: "★";
+    color: #ffcc00;
+    position: absolute;
+    left: 0;
+}
+
+/* Эффекты */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall 10s linear infinite;
+    user-select: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.2;
+    }
+}
+
+/* Добавляем магию */
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    left: 60%;
+    animation-duration: 7s;
+}
+
+.snowflake:nth-child(5) {
+    left: 80%;
+    animation-delay: 6s;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+    border-top: 5px solid gold;
+}
